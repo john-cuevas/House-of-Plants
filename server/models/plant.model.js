@@ -2,35 +2,49 @@ const mongoose = require('mongoose')
 
 const PlantSchema = new mongoose.Schema({
     commonName : {
-        type: String
+        type: String,
+        required: [true, "Common name is required"]
     },
     scientificName : {
-        type: String
+        type: String,
+        required: [true, "Scientific name is required"]
     },
     picture : {
-        type: String
+        type: String,
+        required: [true, "Picture is required"]
     },
     description : {
-        type: String
+        type: String,
+        required: [true, "Description is required"]
     },
     temperature : {
-        type: String
+        type: String,
+        required: [true, "Temperature is required"]
     },
     humidity : {
-        type: String
+        type: String,
+        required: [true, "Humidity is required"]
     },
     water : {
-        type: String
+        type: String,
+        required: [true, "Water is required"]
     },
     light : {
-        type: String
+        type: String,
+        required: [true, "Lighting is required"]
     },
     soil : {
-        type: String
+        type: String,
+        required: [true, "Soil is required"]
     },
     fertilizer : {
-        type: String
+        type: String,
+        required: [true, "Fertilizer is required"]
     },
+    easy : {
+        type: Boolean,
+        required: [true, "Ease of care is required"]
+    }
 
 }, {timestamps : true})
 
