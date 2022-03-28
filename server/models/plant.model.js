@@ -34,6 +34,4 @@ const PlantSchema = new mongoose.Schema({
 
 }, {timestamps : true})
 
-// Create Plant variable that is exported, 
-// this will allow us to import and enable CRUD functionality
 module.exports.Plant = mongoose.model('Plant', PlantSchema)
