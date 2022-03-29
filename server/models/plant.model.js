@@ -46,11 +46,7 @@ const PlantSchema = new mongoose.Schema({
         required: [true, "Type of plant is required"]
     },
     favorite : {
-<<<<<<< HEAD
         type: Boolean,
-=======
-        type: String,
->>>>>>> Server
         required: [true, "Favorite is required"]
     }
 
