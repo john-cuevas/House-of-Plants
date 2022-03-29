@@ -17,10 +17,10 @@ const Header = () => {
                 <ul>
                     {/* New view ? */}
                     <li><Link to={"/succulents"}>Succulents</Link></li>
-                    <li><Link to={"/"}>Cacti</Link></li>
-                    <li><Link to={"/"}>Flowering Plants</Link></li>
-                    <li><Link to={"/"}>Rare Plants</Link></li>
-                    <li><Link to={"/"}>Easy to Care for</Link></li>
+                    <li><Link to={"/cacti"}>Cacti</Link></li>
+                    <li><Link to={"/flowering_plants"}>Flowering Plants</Link></li>
+                    <li><Link to={"/rare_plants"}>Rare Plants</Link></li>
+                    <li><Link to={"/easy_to_care_for"}>Easy to Care for</Link></li>
                 </ul>
             </div>
         </div>
