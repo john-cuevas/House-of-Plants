@@ -1,4 +1,4 @@
-const PlantController = require('./../controllers/plant.controller')
+const PlantController = require('../controllers/plant.controller')
 
 module.exports = app => {
     app.get("/api/plants", PlantController.allPlants)
