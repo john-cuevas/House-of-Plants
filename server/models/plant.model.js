@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 
+
 const PlantSchema = new mongoose.Schema({
     commonName : {
         type: String,
@@ -41,9 +42,9 @@ const PlantSchema = new mongoose.Schema({
         type: String,
         required: [true, "Fertilizer is required"]
     },
-    type : {
-        type: String,
-        required: [true, "Type of plant is required"]
+    easy : {
+        type: Boolean,
+        required: [true, "Ease of care is required"]
     }
 
 }, {timestamps : true})
