@@ -12,7 +12,7 @@ const Succulents = () => {
             .catch(err => console.log(err))
     }, [])
 
-    const filteredPlants = plants.filter((plant, i) => plant.type.includes("succulent"))
+    const filteredPlants = plants.filter((plant) => plant.type.includes("succulent"))
 
     return (
         <div>
