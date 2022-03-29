@@ -41,9 +41,9 @@ const PlantSchema = new mongoose.Schema({
         type: String,
         required: [true, "Fertilizer is required"]
     },
-    easy : {
-        type: Boolean,
-        required: [true, "Ease of care is required"]
+    type : {
+        type: String,
+        required: [true, "Type of plant is required"]
     }
 
 }, {timestamps : true})
