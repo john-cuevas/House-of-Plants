@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Dashboard from "./views/Dashboard";
 import Favorites from "./views/Favorites";
 import OnePlant from "./views/OnePlant";
+import Succulents from "./views/Succulents";
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
           </Route>
           <Route exact path = "/favorites">
             <Favorites/>
+          </Route>
+          <Route exact path = "/succulents">
+            <Succulents/>
           </Route>
 
         </Switch>
