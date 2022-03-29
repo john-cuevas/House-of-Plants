@@ -16,7 +16,7 @@ const Header = () => {
             <div className='links navbar'>
                 <ul>
                     {/* New view ? */}
-                    <li><Link to={"/"}>Succulents</Link></li>
+                    <li><Link to={"/succulents"}>Succulents</Link></li>
                     <li><Link to={"/"}>Cacti</Link></li>
                     <li><Link to={"/"}>Flowering Plants</Link></li>
                     <li><Link to={"/"}>Rare Plants</Link></li>
