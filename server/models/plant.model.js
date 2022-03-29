@@ -44,6 +44,10 @@ const PlantSchema = new mongoose.Schema({
     type : {
         type: String,
         required: [true, "Type of plant is required"]
+    },
+    favorite : {
+        type: String,
+        required: [true, "Favorite is required"]
     }
 
 }, {timestamps : true})
