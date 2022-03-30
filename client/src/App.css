@@ -61,8 +61,8 @@ a{
 .CarouselContainer img{
   /* width: 35vw !important; */
   width: 800px !important;
-  height: 400px !important;
-  border-radius: 0% !important;
+  height: 600px !important;
+  border-radius: 10% !important;
   object-fit:cover;
 }
 
