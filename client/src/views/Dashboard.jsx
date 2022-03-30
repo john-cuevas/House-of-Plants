@@ -5,6 +5,7 @@ import Carousel from 'react-elastic-carousel'
 
 const Dashboard = () => {
     const [plants, setPlants] = useState([])
+
     const carousel = 
         [
             {id: 1, source: 'https://cdn.shopify.com/s/files/1/2541/4208/products/wholesale-succulent-plants-for-sale-by-succy-crafts-314732.jpg?v=1623784454'},
@@ -19,7 +20,7 @@ const Dashboard = () => {
         axios.get(`http://localhost:8000/api/plants`)
             .then(res => setPlants(res.data))
             .catch(err => console.log(err))
-    }, [])
+    }, [])  
 
     return (
         <div className='DashboardContainer'>
