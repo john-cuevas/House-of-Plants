@@ -27,5 +27,7 @@ require("./routes/user.routes")(app)
 
 // listen to the port
 app.listen(8000, () => console.log("The server is all fired up on port 8000"))
+<<<<<<< HEAD
+=======
 
-//****************MONGOOSE.CONFIG.js******************/
+>>>>>>> Server
