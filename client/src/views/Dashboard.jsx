@@ -13,17 +13,19 @@ const Dashboard = () => {
 
     return (
         <div>
-            {
-                plants &&
-                plants.map((plant, i) => (
-                    <div key = {i}>
-                        <p> 
-                            <Link to={`/plants/${plant._id}`}>{plant.commonName}</Link>
-                        </p>
-                        {/* <img src={plant.picture} alt = "Plant image"/> */}
-                    </div>
-                ))
-            }
+            <div className='PlantContainer'>
+                {
+                    plants &&
+                    plants.map((plant, i) => (
+                        <div className = 'Plants' key = {i}>
+                            <p> 
+                                <Link to={`/plants/${plant._id}`}>{plant.commonName}</Link>
+                            </p>
+                            <img  src={plant.picture} alt = "Plant image"/>
+                        </div>
+                    ))
+                }
+            </div>
         </div>
     )
 }

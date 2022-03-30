@@ -15,20 +15,21 @@ const RarePlants = () => {
     const filteredPlants = plants.filter((plant) => plant.type.includes("rare"))
 
     return (
-        <div>
+        <div className='typeContainer'>
             <h1>Rare Plants</h1>
-            <Link to={"/"}>Dashboard</Link>
-            {
-                filteredPlants &&
-                filteredPlants.map((plant, i) => (
-                    <div key={i}>
-                        <p>
-                            <Link to={`/plants/${plant._id}`}>{plant.commonName}</Link>
-                        </p>
-                        <img src={plant.picture} alt="Plant image" />
-                    </div>
-                ))
-            }
+            <div>
+                {
+                    filteredPlants &&
+                    filteredPlants.map((plant, i) => (
+                        <div className = 'Plants' key={i}>
+                            <p>
+                                <Link to={`/plants/${plant._id}`}>{plant.commonName}</Link>
+                            </p>
+                            <img src={plant.picture} alt="Plant image" />
+                        </div>
+                    ))
+                }
+            </div>
         </div>
     )
 }
