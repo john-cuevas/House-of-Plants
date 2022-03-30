@@ -1,7 +1,9 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios'
+import {useHistory} from 'react-router-dom'
 
 const Register = () => {
+    const history = useHistory()
     const [user, setUser] = useState({
         firstName:"",
         email:"",
@@ -20,7 +22,8 @@ const Register = () => {
     const submitHandler = (e) =>{
         e.preventDefault()
         axios.post(`http://localhost:8000/api/register`, user, {withCredentials:true})
-            .then(res=>console.log(res.data))
+            .then(response=>console.log(response.data))
+            .then(res=>history.push("/"))
             .catch(err => console.log(err.response))
     }
     return (

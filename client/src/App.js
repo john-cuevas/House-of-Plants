@@ -50,7 +50,7 @@ function App() {
           <Route path = "/login">
             <Login />
           </Route>
-          <Route path = "/cookie">
+          <Route path = "/cookie"> 
             <Cookie />
           </Route>
 

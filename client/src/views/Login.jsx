@@ -21,6 +21,7 @@ const Login = () => {
     const submitHandler = (e) =>{
         e.preventDefault()
         axios.post(`http://localhost:8000/api/login`, user, {withCredentials:true})
+            .then(response=>console.log(response.data))
             .then(res=>history.push("/"))
             .catch(err=> console.log(err.response))
     }
