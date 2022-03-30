@@ -16,7 +16,7 @@ const Cacti = () => {
 
     return (
         <div className='typeContainer'>
-            <h1>Cacti</h1>
+            <h2>Cacti</h2>
             <div className='PlantContainer'>
                 {
                     filteredPlants &&
