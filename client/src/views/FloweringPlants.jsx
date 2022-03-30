@@ -16,7 +16,7 @@ const FloweringPlants = () => {
 
     return (
         <div className='typeContainer'>
-            <h1>FLowering Plants</h1>
+            <h1>Flowering Plants</h1>
             <div className='PlantContainer'>
                 {
                     filteredPlants &&

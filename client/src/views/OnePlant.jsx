@@ -12,10 +12,9 @@ const OnePlant = () => {
     }, [])
     return (
         <div>
-            <Link to={"/"}>Dashboard</Link>
             {
                 plant?
-                    <div>
+                    <div className='OnePlantContainer'>
                         <h2> {plant.commonName} </h2>
                         <h5> {plant.scientificName} </h5>
                         <img src={plant.picture} alt = "Plant image"/>

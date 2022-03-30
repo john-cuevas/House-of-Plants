@@ -12,7 +12,7 @@
 }
 
 .navbar{
-  background-color: gainsboro;
+  /* background-color: gainsboro; */
   padding: 10px;
 }
 
@@ -27,21 +27,41 @@
 .links{
   display: flex;
   justify-content: space-evenly;
-  background-color: antiquewhite;
+  /* background-color: antiquewhite; */
   align-items: center;
 }
 
 .links ul {
   display: flex;
   gap: 60px;
-  list-style-type: none;
   font-size: 18pt;
+}
+
+ul{
+  list-style-type: none;
 }
 
 a{
   text-decoration: none;
   color: black;
 
+}
+
+.DashboardContainer{
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel img{
+  width: 400px !important;
+  height: 300px !important;
+  border-radius: 0% !important;
 }
 
 .PlantContainer{
@@ -54,6 +74,7 @@ img{
   width: 200px;
   height: 200px;
   border-radius: 50%;
+  /* object-fit: cover; */
 }
 
 .Plants {
@@ -65,6 +86,12 @@ img{
 }
 
 .typeContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.OnePlantContainer{
   display: flex;
   flex-direction: column;
   align-items: center;
