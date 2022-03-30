@@ -17,7 +17,7 @@ const RarePlants = () => {
     return (
         <div className='typeContainer'>
             <h1>Rare Plants</h1>
-            <div>
+            <div className='PlantContainer'>
                 {
                     filteredPlants &&
                     filteredPlants.map((plant, i) => (
