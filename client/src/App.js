@@ -13,7 +13,7 @@ import Succulents from "./views/Succulents";
 
 function App() {
   return (
-    <div>
+    <div className="MainContainer">
       <BrowserRouter>
         <Header/>
         <Switch>
