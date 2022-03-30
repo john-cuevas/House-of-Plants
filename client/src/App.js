@@ -10,6 +10,9 @@ import FloweringPlants from "./views/FloweringPlants";
 import OnePlant from "./views/OnePlant";
 import RarePlants from "./views/RarePlants";
 import Succulents from "./views/Succulents";
+import Register from './views/Register';
+import Login from './views/Login';
+import Cookie from './views/Cookie';
 
 function App() {
   return (
@@ -40,6 +43,15 @@ function App() {
           </Route>
           <Route exact path = "/easy_to_care_for">
             <Easy/>
+          </Route>
+          <Route path = "/register">
+            <Register />
+          </Route>
+          <Route path = "/login">
+            <Login />
+          </Route>
+          <Route path = "/cookie">
+            <Cookie />
           </Route>
 
         </Switch>
