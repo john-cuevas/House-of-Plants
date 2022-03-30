@@ -12,7 +12,12 @@ const Dashboard = () => {
     }, [])
 
     return (
-        <div>
+        <div className='DashboardContainer'>
+            <div className="carousel">
+                <h1>Carousel Here</h1>
+                <img src='https://image.dynamixse.com/crop/900x600/webp.q80.png-lossy-85/https://octanecdn.com/pikearmstrong/armstronggardencom_273578920.jpg'/>
+
+            </div>
             <div className='PlantContainer'>
                 {
                     plants &&
