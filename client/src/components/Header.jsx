@@ -1,17 +1,38 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
+import axios from 'axios'
 import {Link} from 'react-router-dom'
-// import './App.css';
 
 const Header = () => {
+    const [plants, setPlants] = useState([])
+    const [filteredResults, setFilteredResults] = useState([])
+    const [search, setSearch] = useState("")
+
+    useEffect(() => {
+        axios.get(`http://localhost:8000/api/plants`)
+            .then(res => setPlants(res.data))
+            .catch(err => console.log(err))
+    }, [])  
+    const searchItems = (searchValue) => {
+        // setSearch(searchValue)
+
+        if (searchValue == '') {
+            setFilteredResults(plants)
+            setSearch("")
+        }
+        else{
+            const filteredPlant = plants.filter((plant) => plant.commonName.toLowerCase().includes(searchValue.toLowerCase())) 
+                
+            setFilteredResults(filteredPlant)
+        }
+    }
+
     return (
         <div className='NavbarContainer'>
             <div className='navbar'>
                 <h1><Link to={"/"}>House of Plants</Link></h1>
-                <form>
-                    <input type="text" placeholder = "Search"/>
-                    {/* Search icon probably better */}
-                    {/* <button>Search</button> */}
-                </form>
+                <input icon='search'
+                placeholder='Search'
+                onChange={(e) => searchItems(e.target.value)}/>
                 <Link to={"/login"}><button>Sign In</button></Link>
             </div>
             <div className='links navbar'>
@@ -24,6 +45,21 @@ const Header = () => {
                     <li><Link to={"/easy_to_care_for"}>Easy to Care for</Link></li>
                 </ul>
             </div>
+
+            <div className='PlantContainer'>
+                {
+                    filteredResults &&
+                    filteredResults.map((plant, i) => (
+                        <div className = 'Plants' key = {i}>
+                            <p> 
+                                <Link to={`/plants/${plant._id}`}>{plant.commonName}</Link>
+                            </p>
+                            <img src={plant.picture} alt = "Plant image"/>
+                        </div>
+                    ))
+                }
+            </div>
+
         </div>
     )
 }
