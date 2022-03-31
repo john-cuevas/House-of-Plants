@@ -12,7 +12,7 @@ const Header = () => {
                     {/* Search icon probably better */}
                     {/* <button>Search</button> */}
                 </form>
-                <Link to={"/register"}><button>Sign In</button></Link>
+                <Link to={"/login"}><button>Sign In</button></Link>
             </div>
             <div className='links navbar'>
                 <ul>
