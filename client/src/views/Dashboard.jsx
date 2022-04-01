@@ -65,34 +65,6 @@ const Dashboard = () => {
                     placeholder='Search for Plants'
                     onChange={(e) => searchItems(e.target.value)}/>
             </div>
-            {/* <div className='PlantContainer'>
-                {
-                    plants &&
-                    plants.map((plant, i) => (
-                        <div className = 'Plants' key = {i}>
-                            <p> 
-                                <Link to={`/plants/${plant._id}`}>{plant.commonName}</Link>
-                            </p>
-                            <img  src={plant.picture} alt = "Plant image"/>
-                            <button type="button" onClick={() => handleFavorite(plant._id)}>Favorite</button>
-                        </div>
-                    ))
-                }
-            </div> */}
-
-            {/* <div className='PlantContainer'>
-                {
-                    filteredResults &&
-                    filteredResults.map((plant, i) => (
-                        <div className = 'Plants' key = {i}>
-                            <p> 
-                                <Link to={`/plants/${plant._id}`}>{plant.commonName}</Link>
-                            </p>
-                            <img src={plant.picture} alt = "Plant image"/>
-                        </div>
-                    ))
-                }
-            </div> */}
 
             <div className='PlantContainer'>
                 {
@@ -112,7 +84,9 @@ const Dashboard = () => {
                                 <Link to={`/plants/${plant._id}`}>{plant.commonName}</Link>
                             </p>
                             <img  src={plant.picture} alt = "Plant image"/>
-                            <button type="button" onClick={() => handleFavorite(plant._id)}>Favorite</button>
+                            <Link>
+                                <button type="button" onClick={() => handleFavorite(plant._id)}>Favorite</button>
+                            </Link>
                         </div>
                     ))
     

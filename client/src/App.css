@@ -25,6 +25,11 @@
   top: 10px;
 }
 
+.navbarlink{
+  display:flex;
+  justify-content: center;
+}
+
 
 .SearchContainer input{
   width: 500px;
@@ -102,6 +107,10 @@ img{
   align-items: center;
   width: 300px;
   margin: 20px 0px 30px 0px;
+}
+
+.Plants Button{
+  margin-top: 10px;
 }
 
 .typeContainer{
