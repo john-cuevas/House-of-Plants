@@ -46,11 +46,12 @@ const PlantSchema = new mongoose.Schema({
         type: String,
         required: [true, "Type of plant is required"]
     },
-    favorite : {
-        type: Boolean,
-        required: [true, "Favorite is required"]
-    }
+    // favorite : {
+    //     type: Boolean,
+    //     required: [true, "Favorite is required"]
+    // }
 
 }, {timestamps : true})
 
 module.exports.Plant = mongoose.model('Plant', PlantSchema)
+module.exports.plantSchema = PlantSchema

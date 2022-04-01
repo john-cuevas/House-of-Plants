@@ -21,6 +21,19 @@ const Dashboard = () => {
             .catch(err => console.log(err))
     }, [])
 
+    const handleFavorite = (plantId) => {
+        console.log(plantId)
+        // axios.put(`http://localhost:8000/api/favorites`, )
+        axios({
+            method: 'put',
+            url: `http://localhost:8000/api/favorites`,
+            withCredentials: true,
+            data: {
+                plantId
+            }
+        });
+    }
+
     return (
         <div className='DashboardContainer'>
             <div className='CarouselContainer'>
@@ -41,6 +54,7 @@ const Dashboard = () => {
                                 <Link to={`/plants/${plant._id}`}>{plant.commonName}</Link>
                             </p>
                             <img  src={plant.picture} alt = "Plant image"/>
+                            <button type="button" onClick={() => handleFavorite(plant._id)}>Favorite</button>
                         </div>
                     ))
                 }

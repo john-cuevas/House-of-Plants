@@ -1,8 +1,10 @@
 const mongoose = require('mongoose')
 const {Plant} = require("./../models/plant.model") //not sure if I need this
 const bcrypt = require('bcrypt');
+const Schema = mongoose.Schema
+const {plantSchema} = require("./../models/plant.model")
 
-const UserSchema = new mongoose.Schema({
+const UserSchema = new Schema({
     firstName: {
         type: String,
         required: [true, "First name is required"]
@@ -20,7 +22,8 @@ const UserSchema = new mongoose.Schema({
         required: [true, "Password is required"],
         minlength: [8, "Password must be 8 characters or longer"]
     },
-    // favorite: {PlantSchema}, // might need to change this as well when I start working on favorites
+    favorites: [plantSchema],
+        
 
 }, {timestamps: true});
 

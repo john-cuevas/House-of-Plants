@@ -1,8 +1,17 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
-// import './App.css';
+import {Link, useHistory} from 'react-router-dom'
+import axios from 'axios'
+
 
 const Header = () => {
+    let history = useHistory()
+
+    const handleLogOut = ()=> {
+        axios.get(`http://localhost:8000/api/logout`,{withCredentials: true})
+            .then(history.push("/"))
+            .catch()
+    }
+
     return (
         <div className='NavbarContainer'>
             <div className='navbar'>
@@ -12,7 +21,11 @@ const Header = () => {
                     {/* Search icon probably better */}
                     {/* <button>Search</button> */}
                 </form>
-                <button>Sign In</button>
+                <Link to="/favorites"><button>Favorites</button></Link>
+                <Link to="/login"> <button>Sign In</button></Link>
+                <Link to="/register">New user?</Link>
+                <button onClick={handleLogOut}>Sign Out</button>
+                
             </div>
             <div className='links navbar'>
                 <ul>
