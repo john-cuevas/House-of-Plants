@@ -14,17 +14,13 @@ const Header = () => {
 
     return (
         <div className='NavbarContainer'>
-            <div className='navbar'>
+            <div className='navbar1'>
                 <h1><Link to={"/"}>House of Plants</Link></h1>
-                <form>
-                    <input type="text" placeholder = "Search"/>
-                    {/* Search icon probably better */}
-                    {/* <button>Search</button> */}
-                </form>
-                <Link to="/favorites"><button>Favorites</button></Link>
-                <Link to="/login"> <button>Sign In</button></Link>
-                <Link to="/register">New user?</Link>
-                <button onClick={handleLogOut}>Sign Out</button>
+                <div className='navbarlink'>
+                    <Link to="/favorites"><button>Favorites</button></Link>
+                    <Link to="/login"> <button>Sign In</button></Link>
+                    <Link><button onClick={handleLogOut}>Sign Out</button></Link>
+                </div>
                 
             </div>
             <div className='links navbar'>
