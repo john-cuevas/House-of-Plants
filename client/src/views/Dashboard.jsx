@@ -5,6 +5,7 @@ import Carousel from 'react-elastic-carousel'
 
 const Dashboard = () => {
     const [plants, setPlants] = useState([])
+    const [filteredResults, setFilteredResults] = useState("")
 
     const carousel = 
         [
@@ -22,8 +23,21 @@ const Dashboard = () => {
             .catch(err => console.log(err))
     }, [])  
 
+    const searchItems = (searchValue) => {
+
+        if (searchValue == '') {
+            setFilteredResults(plants)
+        }
+        else{
+            const filteredPlant = plants.filter((plant) => plant.commonName.toLowerCase().includes(searchValue.toLowerCase())) 
+                
+            setFilteredResults(filteredPlant)
+        }
+    }
+
     return (
         <div className='DashboardContainer'>
+
             <div className='CarouselContainer'>
                 <Carousel>
                     {carousel.map(item =>
@@ -33,7 +47,12 @@ const Dashboard = () => {
                         )}
                 </Carousel>
             </div>
-            <div className='PlantContainer'>
+            <div className='SearchContainer'>
+                <input icon='search'
+                    placeholder='Search for Plants'
+                    onChange={(e) => searchItems(e.target.value)}/>
+            </div>
+            {/* <div className='PlantContainer'>
                 {
                     plants &&
                     plants.map((plant, i) => (
@@ -44,6 +63,44 @@ const Dashboard = () => {
                             <img  src={plant.picture} alt = "Plant image"/>
                         </div>
                     ))
+                }
+            </div> */}
+
+            {/* <div className='PlantContainer'>
+                {
+                    filteredResults &&
+                    filteredResults.map((plant, i) => (
+                        <div className = 'Plants' key = {i}>
+                            <p> 
+                                <Link to={`/plants/${plant._id}`}>{plant.commonName}</Link>
+                            </p>
+                            <img src={plant.picture} alt = "Plant image"/>
+                        </div>
+                    ))
+                }
+            </div> */}
+
+            <div className='PlantContainer'>
+                {
+                    filteredResults?
+                    filteredResults.map((plant, i) => (
+                        <div className = 'Plants' key = {i}>
+                            <p> 
+                                <Link to={`/plants/${plant._id}`}>{plant.commonName}</Link>
+                            </p>
+                            <img src={plant.picture} alt = "Plant image"/>
+                        </div>
+                    ))
+                    :
+                    plants.map((plant, i) => (
+                        <div className = 'Plants' key = {i}>
+                            <p> 
+                                <Link to={`/plants/${plant._id}`}>{plant.commonName}</Link>
+                            </p>
+                            <img  src={plant.picture} alt = "Plant image"/>
+                        </div>
+                    ))
+    
                 }
             </div>
         </div>
