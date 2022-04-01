@@ -112,6 +112,7 @@ const Dashboard = () => {
                                 <Link to={`/plants/${plant._id}`}>{plant.commonName}</Link>
                             </p>
                             <img  src={plant.picture} alt = "Plant image"/>
+                            <button type="button" onClick={() => handleFavorite(plant._id)}>Favorite</button>
                         </div>
                     ))
     
