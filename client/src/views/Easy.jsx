@@ -16,7 +16,7 @@ const Easy = () => {
 
     return (
         <div className='typeContainer'>
-            <h1>Easy to Care for Plants</h1>
+            <h2>Easy to Care for Plants</h2>
             <div className='PlantContainer'>
                 {
                     filteredPlants &&

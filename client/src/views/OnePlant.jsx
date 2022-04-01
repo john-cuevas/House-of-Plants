@@ -13,7 +13,7 @@ const OnePlant = () => {
     return (
         <div>
             {
-                plant?
+                plant &&
                     <div className='OnePlantContainer'>
                         <h2> {plant.commonName} </h2>
                         <h5> {plant.scientificName} </h5>
@@ -26,8 +26,8 @@ const OnePlant = () => {
                         <p>Soil: {plant.soil}</p>
                         <p>Fertilizer: {plant.fertilizer}</p>
 
-                    </div>:
-                    <h1>Sorry plant does not exist, please search again.</h1>
+                    </div>
+                    
             }
         </div>
     )

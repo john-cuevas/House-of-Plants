@@ -37,6 +37,8 @@ const Header = () => {
                     <li><Link to={"/easy_to_care_for"}>Easy to Care for</Link></li>
                 </ul>
             </div>
+
+
         </div>
     )
 }

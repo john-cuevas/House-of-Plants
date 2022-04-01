@@ -16,7 +16,7 @@ const Succulents = () => {
 
     return (
         <div className='typeContainer'>
-            <h1>Succulents</h1>
+            <h2>Succulents</h2>
             <div className='PlantContainer'>
                 {
                     filteredPlants &&

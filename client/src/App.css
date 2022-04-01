@@ -12,12 +12,22 @@
 }
 
 .navbar{
-  /* background-color: gainsboro; */
   padding: 10px;
 }
 
-.navbar input{
-  width: 300px;
+.navbar1{
+  text-align: center;
+}
+
+.navbarbtn{
+  position: fixed;
+  right: 500px;
+  top: 10px;
+}
+
+
+.SearchContainer input{
+  width: 500px;
 }
 
 .navbar button{
@@ -58,10 +68,19 @@ a{
   align-items: center;
 }
 
-.carousel img{
-  width: 400px !important;
-  height: 300px !important;
-  border-radius: 0% !important;
+.CarouselContainer img{
+  /* width: 35vw !important; */
+  width: 800px !important;
+  height: 600px !important;
+  border-radius: 10% !important;
+  object-fit:cover;
+}
+
+.SearchContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
 }
 
 .PlantContainer{
@@ -74,7 +93,7 @@ img{
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  /* object-fit: cover; */
+  object-fit: cover;
 }
 
 .Plants {
@@ -95,4 +114,37 @@ img{
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.RegisterForm{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 400px;
+  margin: 0 auto;
+  height: 400px;
+  padding: 20px;
+}
+
+.RegisterForm a{
+  color: rgb(4, 165, 4) !important;
+}
+
+button{
+  width: 100px;
+  background-color: rgb(4, 165, 4);
+  border-radius: 10%;
+}
+
+.FormInput{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.FormButton{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
 }
