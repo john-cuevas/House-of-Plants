@@ -6,6 +6,7 @@ import Carousel from 'react-elastic-carousel'
 const Dashboard = () => {
     const [plants, setPlants] = useState([])
     const [filteredResults, setFilteredResults] = useState("")
+    const [user, setUser] = useState("")
 
     const carousel = 
         [
@@ -22,6 +23,12 @@ const Dashboard = () => {
             .then(res => setPlants(res.data))
             .catch(err => console.log(err))
     }, [])  
+
+    useEffect(() =>{
+        axios.get(`http://localhost:8000/api/user`,{withCredentials: true})
+            .then(res => setUser(res.data))
+            .catch(err => console.log(err))
+    })
 
     const searchItems = (searchValue) => {
 
@@ -66,7 +73,7 @@ const Dashboard = () => {
                     onChange={(e) => searchItems(e.target.value)}/>
             </div>
 
-            <div className='PlantContainer'>
+            {/* <div className='PlantContainer'>
                 {
                     filteredResults?
                     filteredResults.map((plant, i) => (
@@ -84,9 +91,54 @@ const Dashboard = () => {
                                 <Link to={`/plants/${plant._id}`}>{plant.commonName}</Link>
                             </p>
                             <img  src={plant.picture} alt = "Plant image"/>
-                            <Link>
                                 <button type="button" onClick={() => handleFavorite(plant._id)}>Favorite</button>
-                            </Link>
+                            
+                        </div>
+                    ))
+    
+                }
+            </div> */}
+            <div className='PlantContainer'>
+                {
+                    filteredResults?
+                    filteredResults.map((plant, i) => (
+                        <div className = 'Plants' key = {i}>
+                            <p> 
+                                <Link to={`/plants/${plant._id}`}>{plant.commonName}</Link>
+                            </p>
+                            <img src={plant.picture} alt = "Plant image"/>
+                            {
+                                user?
+                                    <div >
+                                        <button type="button" onClick={() => handleFavorite(plant._id)}>Favorite</button>
+                                    </div>
+                                :
+                                    <div >
+                        
+                                    </div>
+
+                    }
+                        </div>
+                    ))
+                    :
+                    plants.map((plant, i) => (
+                        <div className = 'Plants' key = {i}>
+                            <p> 
+                                <Link to={`/plants/${plant._id}`}>{plant.commonName}</Link>
+                            </p>
+                            <img  src={plant.picture} alt = "Plant image"/>
+                            {
+                                user?
+                                    <div >
+                                        <button type="button" onClick={() => handleFavorite(plant._id)}>Favorite</button>
+                                    </div>
+                                :
+                                    <div >
+                        
+                                    </div>
+
+                    }
+                            
                         </div>
                     ))
     

@@ -35,8 +35,9 @@
   width: 500px;
 }
 
-.navbar button{
+.navbarlink button{
   width: 75px;
+  margin-right: 10px;
 }
 
 .links{
