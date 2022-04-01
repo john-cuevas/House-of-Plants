@@ -13,11 +13,21 @@
 
 .navbar{
   padding: 10px;
-  
 }
 
-.navbar input{
-  width: 600px;
+.navbar1{
+  text-align: center;
+}
+
+.navbarbtn{
+  position: fixed;
+  right: 500px;
+  top: 10px;
+}
+
+
+.SearchContainer input{
+  width: 500px;
 }
 
 .navbar button{
@@ -64,6 +74,13 @@ a{
   height: 600px !important;
   border-radius: 10% !important;
   object-fit:cover;
+}
+
+.SearchContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
 }
 
 .PlantContainer{
