@@ -12,7 +12,7 @@ Users can find their desired house plant in a variety of ways: using the search 
 
 ## Categories
 
-Users can learn about different types of house plants such as Succulents, Cacti, Flowering Plants, Rare Plants, and Easy to Care For Plants.
+Users can learn about different types of house plants such as Succulents, Cacti, Flowering Plants, Rare Plants, and Easy to Care for Plants.
 
 ![HOP Succulents](https://user-images.githubusercontent.com/97409382/161410941-fb440cf9-1c3b-4241-8938-be5d99924e1b.png)
 
